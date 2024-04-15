@@ -1,0 +1,9 @@
+#####DAVLAT#####
+from countryinfo import CountryInfo
+count=input('DAVLAT KIRIT>>')
+country=CountryInfo(count)
+print('POYTAXTI-',country.capital())
+print('VALYUTASI-',country.currencies())
+print('TILI-',country.languages())
+print('CHEGARASI-',country.borders())
+print('BOSHQA NOMI-',country.alt_spellings())
