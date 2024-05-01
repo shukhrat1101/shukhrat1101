@@ -1,0 +1,13 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        q=[]
+        h={')':'(','}':'{',']':'['}
+        for c in s:
+            if c in h:
+                if q and q[-1]==h[c]:
+                    q.pop()
+                else:
+                    return False
+            else:
+                q.append(c)
+        return True if not q else False    
