@@ -1,0 +1,17 @@
+def tub_sonmi(n):
+    tub_sonlar = []
+    for num in range(2, n + 1):
+        tub = True
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                tub = False
+                break
+        if tub:
+            tub_sonlar.append(num)
+    print(tub_sonlar)
+    return sum(tub_sonlar)
+
+n = int(input("SON KIRIT>>>>> "))
+
+# print(f"1 dan {n} gacha bo'lgan tub sonlar yig'indisi : {tub_sonmi(n)}")
+print(tub_sonmi(n))
